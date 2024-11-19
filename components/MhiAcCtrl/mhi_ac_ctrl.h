@@ -546,6 +546,21 @@ public:
         ESP_LOGD("mhi_ac_ctrl", "set vanes Left Right: %i", value);
     }
 
+    void set_sck_pin(int value) {
+        mhi_ac_ctrl_core.set_sck_pin(value);
+        ESP_LOGD("mhi_ac_ctrl", "set SCK Pin: %i", value);
+    }
+
+    void set_mosi_pin(int value) {
+        mhi_ac_ctrl_core.set_mosi_pin(value);
+        ESP_LOGD("mhi_ac_ctrl", "set MOSI Pin: %i", value);
+    }
+
+    void set_miso_pin(int value) {
+        mhi_ac_ctrl_core.set_miso_pin(value);
+        ESP_LOGD("mhi_ac_ctrl", "set MISO Pin: %i", value);
+    }
+
     void set_3Dauto(bool value) {
         // ESP_LOGD("mhi_ac_ctrl", "set 3D auto: %s", value);
         if (value){
