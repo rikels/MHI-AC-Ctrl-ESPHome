@@ -24,7 +24,7 @@ CONFIG_SCHEMA = cv.Schema({
     cv.Optional(CONF_VANES_LR, default=0): cv.int_range(min=0, max=8),
     cv.Optional(CONF_SCK_PIN, default=14): pins.internal_gpio_output_pin_number,
     cv.Optional(CONF_MOSI_PIN, default=13): pins.internal_gpio_output_pin_number,
-    cv.Optional(CONF_MISO_PIN, default=12): pins.internal_gpio_output_pin_number,
+    cv.Optional(CONF_MISO_PIN, default=12): pins.internal_gpio_input_pin_number,
 }).extend(cv.COMPONENT_SCHEMA)
 
 async def to_code(config):
